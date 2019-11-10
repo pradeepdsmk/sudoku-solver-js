@@ -1,0 +1,105 @@
+body {
+    background: cadetblue;
+    background-color: slateblue;
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    /* background-color: brown; */
+    box-shadow: 5px 5px 15px #333;
+}
+
+
+td {
+    border: 1px solid cornflowerblue;
+    width: 50px;
+    height: 50px;   
+    text-align: center; 
+    caret-color: transparent;
+    cursor: default;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Helvetica', 'sans';
+    padding: 5px;
+    box-sizing: border-box;
+    color: blueviolet;
+    background-color: wheat;
+    color: black;
+}
+
+td:nth-child(3n):not(:last-child) {
+    border-right: 2px solid white;
+    border-right: 2px solid black;
+}
+
+tr:nth-child(3n):not(:last-child) td {
+    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
+}
+
+td:focus {
+    background: darkblue;
+}
+
+#puzzle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+button {
+    padding: 5px 10px;
+    /* background: green; */
+    /* color: white; */
+    font-size: 14px;
+    text-transform: uppercase;
+    /* border: 1px solid green; */
+    /* border-radius: 4px; */
+    /* cursor: pointer;     */
+    
+}
+
+td.frozen {
+    color: brown;
+    color: black;
+    user-select: none;
+    pointer-events: none;
+    background-color: rgb(190, 81, 81);
+    color: wheat;
+}
+
+td.frozen:focus {
+    background: none;
+}
+
+td.diag {
+    font-size: 12px;
+    color: yellow;    
+    color: blue;
+    background-color: pink;
+}
+
+td.highlight {
+    animation: highlight 800ms ease-out;
+}
+@keyframes highlight {
+    0% {
+        background-color: darkblue;
+        /* background-color: #ccc; */
+        color: yellow;
+    }
+    100% {
+        background-color: wheat;
+        color: yellow;
+
+    }
+}
